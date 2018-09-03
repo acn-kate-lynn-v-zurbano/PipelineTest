@@ -5,7 +5,7 @@ pipeline {
 			agent any
 			steps {
 				sh "printenv"
-                script '''
+                sh '''
                     yum install nettools -y
                     netstat -tuanop | grep 5000'''
 			}
