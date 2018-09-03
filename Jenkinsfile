@@ -6,7 +6,7 @@ pipeline {
 			steps {
 				sh "printenv"
                 sh '''
-                    yum install nettools -y
+                    sudo apt-get install nettools -y
                     netstat -tuanop | grep 5000'''
 			}
 		}
