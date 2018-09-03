@@ -5,8 +5,9 @@ pipeline {
 			agent any
 			steps {
 				sh "printenv"
-                sh "yum install nettools -y"
-                sh "netstat -tuanop | grep 5000"
+                scripts '''
+                    yum install nettools -y
+                    netstat -tuanop | grep 5000'''
 			}
 		}
 		stage('Test') {
