@@ -20,6 +20,7 @@ pipeline {
 		stage('Status') {
             agent any
             steps {
+		        logstashSend failBuild: true, maxLines: 1000
                 sh "echo 'DONE'"
             }
         }
