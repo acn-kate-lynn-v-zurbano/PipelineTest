@@ -5,8 +5,6 @@ pipeline {
 			agent any
 			steps {
 				sh "printenv"
-                sh ''' sudo apt-get install nettools -y'''
-                   // netstat -tuanop | grep 5000'''
 			}
 		}
 		stage('Test') {
