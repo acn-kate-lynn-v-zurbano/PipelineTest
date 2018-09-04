@@ -5,7 +5,7 @@ pipeline {
 			agent any
 			steps {
 				sh "printenv"
-				sh "sudo apt-get update"
+				sh "sudo su"//apt-get update"
 			}
 		}
 		stage('Test') {
