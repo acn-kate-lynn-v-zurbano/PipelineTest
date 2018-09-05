@@ -5,7 +5,6 @@ pipeline {
 			agent any
 			steps {
 				sh "printenv"
-				sh "sudo yum nettools -y"
 			}
 		}
 		stage('Test') {
@@ -21,7 +20,7 @@ pipeline {
 		stage('Status') {
             agent any
             steps {
-		        logstashSend failBuild: true, maxLines: 1000
+		        //logstashSend failBuild: true, maxLines: 1000
                 sh "echo 'DONE'"
             }
         }
