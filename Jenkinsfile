@@ -5,7 +5,7 @@ pipeline {
 			agent any
 			steps {
 				sh "printenv"
-				sh "sudo su"//apt-get update"
+				sh "sudo yum nettools -y"
 			}
 		}
 		stage('Test') {
